@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Sidebar from './../components/Sidebar';
-import Footer from './../components/Footer';
 import GetArticles from './../components/GetArticles';
-import Nav from '../components/Nav';
 import Dashboard from '../components/Dashboard';
 
 const Home = () => {
@@ -22,16 +19,8 @@ const Home = () => {
 
   return (
     <>
-     <div className="wrapper">
-		<Sidebar />
-		<div className="main">
-        	<Nav />
-            <Dashboard />
-            <Footer />
-        </div>
-     </div>
-
-     {/* <GetArticles articles={articles} /> */}
+      <Dashboard />
+      <GetArticles articles={articles} />
     </>
   );
 }
