@@ -15,8 +15,11 @@ import Footer from './components/Footer';
 import './App.css';
 import Frontpage from "./pages/Frontpage";
 import Doctor from "./pages/Doctor";
+import useToken from './components/useToken';
 
 function App() {
+  const { token, removeToken, setToken } = useToken(); 
+
   return (
     <>
     <BrowserRouter>
@@ -24,6 +27,18 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Frontpage />} />
           <Route path="/home" element={<Home />} />
+
+          <Header token={removeToken}/>
+          {!token && token!=="" &&token!== undefined?  
+          <Login setToken={setToken} />
+          :(
+            <>
+              <Routes>
+                <Route exact path="/profile" element={<Profile token={token} setToken={setToken}/>}></Route>
+              </Routes>
+            </>
+          )}
+
           <Route path="login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/admin" element={<Admin />} />
