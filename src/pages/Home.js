@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './../components/Sidebar';
 // import Footer from './../components/Footer';
 import GetArticles from './../components/GetArticles';
-import Nav from '../components/Nav';
 import Dashboard from '../components/Dashboard';
 import Topbar from '../components/OffsetArea';
 import Footer from '../components/Footer';

@@ -1,9 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import PrivateRoutes from './utils/PrivateRoutes';
 // import { AuthProvider } from './context/AuthContext';
+import Sidebar from './components/Sidebar';
+import Nav from './components/Nav';
 import Home from './pages/Home';
+import Admin from './pages/Admin';
+import Laboratory from './pages/Laboratory';
+import Consulting from './pages/Consulting';
+import Pharmacy from './pages/Pharmacy';
+import Nursing from './pages/Nursing';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import Footer from './components/Footer';
 import './App.css';
 import Frontpage from "./pages/Frontpage";
 import Admin from "./pages/Admin";
@@ -11,6 +19,7 @@ import Doctor from "./pages/Doctor";
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       {/* <AuthProvider> */}
         <Routes>
@@ -31,6 +40,7 @@ function App() {
         </Routes>
       {/* </AuthProvider> */}
     </BrowserRouter>
+    </>
   )
 }
 
