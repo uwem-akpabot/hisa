@@ -101,7 +101,9 @@
 
 
 /*-------------------- 2.1 Sidebar Menu -------------------*/
-
+.check{
+    background:#f3eeff !important;
+}
 .sidebar-menu {
     position: fixed;
     left: 0;
@@ -110,7 +112,8 @@
     height: 100vh;
     width: 280px;
     overflow: hidden;
-    background: #303641;
+    background: #461360;
+    /* background: #303641; */
     box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -139,9 +142,10 @@
 }
 
 .sidebar-header {
-    padding: 19px 32px 20px;
-    background: #303641;
-    border-bottom: 1px solid #343e50;
+    padding: 10px 0;
+    padding-bottom:0 !important; /* I added this one */
+    background: #461360;
+    /* border-bottom: 1px solid #343e50; */
 }
 .sidebar-menu .logo{
     text-align: center;
@@ -150,14 +154,19 @@
     display: inline-block;
     max-width: 120px;
 }
-
+h4{ 
+    font-family: 'lato', sans-serif !important; 
+    font-weight: 500 !important;
+}
+.bg-indigo{ background: #461360 !important;}
 .metismenu >li >a {
     padding-left: 32px!important;
+    font-family: 'lato', sans-serif !important;
 }
 .metismenu li a {
     position: relative;
     display: block;
-    color: #8d97ad;
+    color: #ccc;
     font-size: 15px;
     text-transform: capitalize;
     padding: 15px 15px;
@@ -166,7 +175,7 @@
 }
 
 .metismenu li a i {
-    color: #6a56a5;
+    color: #8d97ad;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -209,7 +218,8 @@
 .metismenu >li:hover>a,
 .metismenu >li.active>a {
     color: #fff;
-    background: #343942;
+    background: #6a56a5; 
+    /* background: #343942; */
 }
 
 .metismenu li:hover>a,

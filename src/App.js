@@ -14,7 +14,6 @@ import RegisterPage from './pages/RegisterPage';
 import Footer from './components/Footer';
 import './App.css';
 import Frontpage from "./pages/Frontpage";
-import Admin from "./pages/Admin";
 import Doctor from "./pages/Doctor";
 
 function App() {

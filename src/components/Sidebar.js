@@ -1,4 +1,5 @@
 import { Outlet, Link } from 'react-router-dom';
+import logo from './../images/logo.png';
 
 const Sidebar = () => {
     let {user, logoutUser} = '';
@@ -7,8 +8,8 @@ const Sidebar = () => {
     <div className="sidebar-menu">
         <div className="sidebar-header">
             <div className="logo">
-                <h2 className="text-white">BEYOND</h2>
-                {/* <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo" /></a> */}
+                <a href=""><img src={logo} alt="logo" style={{ width:"89%" }} /></a> 
+                {/* <a href=""><img src="assets/images/icon/logo.png" alt="logo" /></a> */}
             </div>
         </div>
         <div className="main-menu">

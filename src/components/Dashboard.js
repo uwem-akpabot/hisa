@@ -3,7 +3,7 @@ import Pagetitle from "./Pagetitle"
 const Dashboard = () => {
   return (
     <>
-    <div className="main-content-inner">
+    <div className="main-content-inner check">
         <div className="row">
             <div className="col-lg-8">
                 <div className="row">

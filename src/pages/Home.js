@@ -7,6 +7,7 @@ import Topbar from '../components/OffsetArea';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import OffsetArea from '../components/OffsetArea';
+import Breadcrumb from '../components/Breadcrumb';
 
 const Home = () => {
   const [articles, setArticles] = useState([])
@@ -29,6 +30,7 @@ const Home = () => {
       <Sidebar />
       <div class="main-content">
         <Header />
+        <Breadcrumb />
         <Dashboard />
         <Footer />
         <OffsetArea />
