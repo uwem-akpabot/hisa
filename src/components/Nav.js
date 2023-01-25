@@ -1,170 +1,151 @@
-import user_image from './../img/avatars/avatar.jpg';
-import avatar2 from './../img/avatars/avatar-2.jpg'
-import avatar3 from './../img/avatars/avatar-3.jpg'
-import avatar4 from './../img/avatars/avatar-4.jpg'
-import avatar5 from './../img/avatars/avatar-5.jpg'
+import { Outlet, Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand navbar-light navbar-bg">
-        <a className="sidebar-toggle js-sidebar-toggle">
-            <i className="hamburger align-self-center"></i>
-        </a>
-        <div className="navbar-collapse collapse">
-            <ul className="navbar-nav navbar-align">
-                <li className="nav-item dropdown">
-                    <a className="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
-                        <div className="position-relative">
-                            <i className="align-middle" data-feather="bell"></i>
-                            <span className="indicator">4</span>
-                        </div>
-                    </a>
-                    <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-                        <div className="dropdown-menu-header">
-                            4 New Notifications
-                        </div>
-                        <div className="list-group">
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <i className="text-danger" data-feather="alert-circle"></i>
-                                    </div>
-                                    <div className="col-10">
-                                        <div className="text-dark">Update completed</div>
-                                        <div className="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                                        <div className="text-muted small mt-1">30m ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <i className="text-warning" data-feather="bell"></i>
-                                    </div>
-                                    <div className="col-10">
-                                        <div className="text-dark">Lorem ipsum</div>
-                                        <div className="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-                                        <div className="text-muted small mt-1">2h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <i className="text-primary" data-feather="home"></i>
-                                    </div>
-                                    <div className="col-10">
-                                        <div className="text-dark">Login from 192.186.1.8</div>
-                                        <div className="text-muted small mt-1">5h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <i className="text-success" data-feather="user-plus"></i>
-                                    </div>
-                                    <div className="col-10">
-                                        <div className="text-dark">New connection</div>
-                                        <div className="text-muted small mt-1">Christina accepted your request.</div>
-                                        <div className="text-muted small mt-1">14h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="dropdown-menu-footer">
-                            <a href="#" className="text-muted">Show all notifications</a>
-                        </div>
-                    </div>
-                </li>
-                <li className="nav-item dropdown">
-                    <a className="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
-                        <div className="position-relative">
-                            <i className="align-middle" data-feather="message-square"></i>
-                        </div>
-                    </a>
-                    <div className="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-                        <div className="dropdown-menu-header">
-                            <div className="position-relative">
-                                4 New Messages
-                            </div>
-                        </div>
-                        <div className="list-group">
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <img src={avatar5} className="avatar img-fluid rounded-circle" alt="Vanessa Tucker" />
-                                    </div>
-                                    <div className="col-10 ps-2">
-                                        <div className="text-dark">Vanessa Tucker</div>
-                                        <div className="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-                                        <div className="text-muted small mt-1">15m ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <img src={avatar2} className="avatar img-fluid rounded-circle" alt="William Harris" />
-                                    </div>
-                                    <div className="col-10 ps-2">
-                                        <div className="text-dark">William Harris</div>
-                                        <div className="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-                                        <div className="text-muted small mt-1">2h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <img src={avatar4} className="avatar img-fluid rounded-circle" alt="Christina Mason" />
-                                    </div>
-                                    <div className="col-10 ps-2">
-                                        <div className="text-dark">Christina Mason</div>
-                                        <div className="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-                                        <div className="text-muted small mt-1">4h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#" className="list-group-item">
-                                <div className="row g-0 align-items-center">
-                                    <div className="col-2">
-                                        <img src={avatar3} className="avatar img-fluid rounded-circle" alt="Sharon Lessman" />
-                                    </div>
-                                    <div className="col-10 ps-2">
-                                        <div className="text-dark">Sharon Lessman</div>
-                                        <div className="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-                                        <div className="text-muted small mt-1">5h ago</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="dropdown-menu-footer">
-                            <a href="#" className="text-muted">Show all messages</a>
-                        </div>
-                    </div>
-                </li>
-                <li className="nav-item dropdown">
-                    <a className="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
-        <i className="align-middle" data-feather="settings"></i>
-        </a>
-
-                    <a className="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-        <img src={user_image} className="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span className="text-dark">Charles Hall</span>
-        </a>
-                    <div className="dropdown-menu dropdown-menu-end">
-                        <a className="dropdown-item" href="pages-profile.html"><i className="align-middle me-1" data-feather="user"></i> Profile</a>
-                        <a className="dropdown-item" href="#"><i className="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="index.html"><i className="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
-                        <a className="dropdown-item" href="#"><i className="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">Log out</a>
-                    </div>
-                </li>
-            </ul>
+    <>
+    <nav className="sidebar sidebar-offcanvas" id="sidebar">
+        <div className="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+            <a className="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+            <a className="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
-    </nav>
+        <ul className="nav">
+            <li className="nav-item profile">
+            <div className="profile-desc">
+                <div className="profile-pic">
+                <div className="count-indicator">
+                    <img className="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="" />
+                    <span className="count bg-success"></span>
+                </div>
+                <div className="profile-name">
+                    <h5 className="mb-0 font-weight-normal">Henry Klein</h5>
+                    <span>Gold Member</span>
+                </div>
+                </div>
+                <a href="#" id="profile-dropdown" data-toggle="dropdown"><i className="mdi mdi-dots-vertical"></i></a>
+                <div className="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" className="dropdown-item preview-item">
+                    <div className="preview-thumbnail">
+                    <div className="preview-icon bg-dark rounded-circle">
+                        <i className="mdi mdi-settings text-primary"></i>
+                    </div>
+                    </div>
+                    <div className="preview-item-content">
+                    <p className="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                    </div>
+                </a>
+                <div className="dropdown-divider"></div>
+                <a href="#" className="dropdown-item preview-item">
+                    <div className="preview-thumbnail">
+                    <div className="preview-icon bg-dark rounded-circle">
+                        <i className="mdi mdi-onepassword  text-info"></i>
+                    </div>
+                    </div>
+                    <div className="preview-item-content">
+                    <p className="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                    </div>
+                </a>
+                <div className="dropdown-divider"></div>
+                <a href="#" className="dropdown-item preview-item">
+                    <div className="preview-thumbnail">
+                    <div className="preview-icon bg-dark rounded-circle">
+                        <i className="mdi mdi-calendar-today text-success"></i>
+                    </div>
+                    </div>
+                    <div className="preview-item-content">
+                    <p className="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                    </div>
+                </a>
+                </div>
+            </div>
+            </li>
+            <li className="nav-item nav-category">
+            <span className="nav-link">Navigation</span>
+            </li>
+            <li className="nav-item menu-items">
+            <Link to="/" className="nav-link">
+                <span className="menu-icon">
+                <i className="mdi mdi-speedometer"></i>
+                </span>
+                <span className="menu-title">Dashboard</span>
+            </Link>
+            </li>
+            <li className="nav-item menu-items">
+            <Link to="/admin" className="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span className="menu-icon">
+                <i className="mdi mdi-laptop"></i>
+                </span>
+                <span className="menu-title">Admin</span>
+                <i className="menu-arrow"></i>
+            </Link>
+            <div className="collapse" id="ui-basic">
+                <ul className="nav flex-column sub-menu">
+                <li className="nav-item"> <a className="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                </ul>
+            </div>
+            </li>
+            <li className="nav-item menu-items">
+            <Link to="/doctor" className="nav-link">
+                <span className="menu-icon">
+                <i className="mdi mdi-playlist-play"></i>
+                </span>
+                <span className="menu-title">Doctor</span>
+            </Link>
+            </li>
+            <li className="nav-item menu-items">
+            <Link to="/" className="nav-link">
+                <span className="menu-icon">
+                <i className="mdi mdi-table-large"></i>
+                </span>
+                <span className="menu-title">Tables</span>
+            </Link>
+            </li>
+            <li className="nav-item menu-items">
+            <a className="nav-link" href="pages/charts/chartjs.html">
+                <span className="menu-icon">
+                <i className="mdi mdi-chart-bar"></i>
+                </span>
+                <span className="menu-title">Charts</span>
+            </a>
+            </li>
+            <li className="nav-item menu-items">
+            <a className="nav-link" href="pages/icons/mdi.html">
+                <span className="menu-icon">
+                <i className="mdi mdi-contacts"></i>
+                </span>
+                <span className="menu-title">Icons</span>
+            </a>
+            </li>
+            <li className="nav-item menu-items">
+            <a className="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span className="menu-icon">
+                <i className="mdi mdi-security"></i>
+                </span>
+                <span className="menu-title">User Pages</span>
+                <i className="menu-arrow"></i>
+            </a>
+            <div className="collapse" id="auth">
+                <ul className="nav flex-column sub-menu">
+                <li className="nav-item"> <a className="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li className="nav-item"> <a className="nav-link" href="pages/samples/register.html"> Register </a></li>
+                </ul>
+            </div>
+            </li>
+            <li className="nav-item menu-items">
+            <a className="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+                <span className="menu-icon">
+                <i className="mdi mdi-file-document-box"></i>
+                </span>
+                <span className="menu-title">Documentation</span>
+            </a>
+            </li>
+        </ul>
+        </nav>
+    </>
   )
 }
 

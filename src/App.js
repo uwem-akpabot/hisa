@@ -5,15 +5,21 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import './App.css';
+import Frontpage from "./pages/Frontpage";
+import Admin from "./pages/Admin";
+import Doctor from "./pages/Doctor";
 
 function App() {
   return (
     <BrowserRouter>
       {/* <AuthProvider> */}
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Frontpage />} />
+          <Route path="/home" element={<Home />} />
           <Route path="login" element={<LoginPage />} />
-          <Route exact path="/register" element={<RegisterPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/doctor" element={<Doctor />} />
           <Route path="*" element={<main style={{ padding: "1rem" }}>
             <h3>Error 404! Page doesn't exist</h3><p>Oops! You landed on a page that does not exist</p></main>}
           />

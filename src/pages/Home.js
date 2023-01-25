@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './../components/Sidebar';
-import Footer from './../components/Footer';
+// import Footer from './../components/Footer';
 import GetArticles from './../components/GetArticles';
 import Nav from '../components/Nav';
 import Dashboard from '../components/Dashboard';
+import Topbar from '../components/OffsetArea';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import OffsetArea from '../components/OffsetArea';
 
 const Home = () => {
   const [articles, setArticles] = useState([])
@@ -22,16 +26,29 @@ const Home = () => {
 
   return (
     <>
-     <div className="wrapper">
-		<Sidebar />
-		<div className="main">
-        	<Nav />
-            <Dashboard />
-            <Footer />
-        </div>
-     </div>
+    <div class="page-container">
+      <Sidebar />
+      <div class="main-content">
+        <Header />
+        <Dashboard />
+        <Footer />
+        <OffsetArea />
+      {/* <div className="container-fluid page-body-wrapper"> */}
+      {/* <div className="page-body-wrapper">
+        <Topbar />
+        
+        <div className="main-panel">
+        <div className="content-wrapper">
+          <Dashboard />
+        </div> 
 
-     {/* <GetArticles articles={articles} /> */}
+        <Footer /> 
+      </div>
+      </div>*/}
+      </div>
+    </div>
+
+      {/* <GetArticles articles={articles} /> */}
     </>
   );
 }
